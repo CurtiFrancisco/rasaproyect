@@ -1,0 +1,60 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: buen_humor
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: mal_humor
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: afirmar
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: mal_humor
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: denegar
+  - action: utter_despedirse
+
+- story: nombre
+  steps:
+    - intent: nombre_cliente
+    - action: utter_preguntar_nombre
+    - intent: dar_nombre
+    - action: action_recibir_nombre
+    - intent: repetir_nombre
+    - action: action_decir_nombre
+    - intent: agradecer
+    - action: action_despedida_nombre
+
+- story: agregar_cliente 
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+    - intent: pregunta_cliente
+    - action: action_verificar_cliente
+
+- story: camino_tarjetas  
+  steps: 
+    - intent: tarjetas
+    - action: utter_tarjeta_opcion
+    - intent: info_tipo_tarjeta
+    - action: action_informacion_tarjeta
+
+- story: cotizacion del dolar
+  steps:
+    - intent: cotizacion_dolar
+    - action: action_cotizacion    

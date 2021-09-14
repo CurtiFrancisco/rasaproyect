@@ -1,0 +1,22 @@
+version: "2.0"
+
+policies:
+- ... # Other policies
+- name: RulePolicy
+
+rules:
+
+- rule: Say despedirse anytime the user says despedirse
+  steps:
+  - intent: despedirse
+  - action: utter_despedirse
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Explicar que puedo hacer cada vez que el usuario pregunta por ayuda.
+  steps:
+    - intent: ayuda
+    - action: action_ayuda

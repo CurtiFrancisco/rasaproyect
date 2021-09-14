@@ -1,0 +1,194 @@
+version: "2.0"
+
+nlu:
+- intent: saludar
+  examples: |
+    - ey
+    - hola
+    - ola
+    - buen dia
+    - buenas tardes
+    - buenas noches
+    - como te va?
+    - che
+    - che amigo
+    - como estas?
+
+- intent: despedirse
+  examples: |
+    - nos vemos
+    - hasta mañana
+    - nos vemos luego
+    - adios
+    - chau
+    - nos re vimos
+    - nv
+    - chau chau
+    - adios adios
+
+- intent: afirmar
+  examples: |
+    - si
+    - s
+    - sep
+    - obvio
+    - claro que si
+    - suena bien
+    - correcto
+    - tenes razon
+
+- intent: denegar
+  examples: |
+    - no
+    - n
+    - nunca
+    - no lo creo
+    - no me gusta
+    - no hay manera
+    - noo
+    - no realmente
+
+- intent: buen_humor
+  examples: |
+    - perfecto
+    - genial
+    - contento
+    - como un rey
+    - espectacular
+    - me siento muy bien
+    - estoy bien
+    - soy genial
+    - voy a salvar el mundo
+    - extremadamente bien
+ 
+- intent: mal_humor
+  examples: |
+    - mi dia es horrible
+    - estoy triste
+    - no me siento muy bien
+    - estoy decepcionado 
+    - super mal
+    - me siento muy triste
+    - triste
+    - muy triste
+    - infeliz
+    - mal
+    - no muy bien
+    - demasiado triste
+ 
+- intent: bot_challenge
+  examples: |
+    - sos un robot?
+    - sos un humano?
+    - estoy hablando con un robot?
+    - estoy hablando con un humano?
+
+- intent: ayuda
+  examples: |
+    - ayuda
+    - necesito ayuda
+    - que podes hacer?
+    - ayudame
+    - consulta
+    - tengo una consulta
+    - en que me podes ayudar
+    - dame una mano
+    - me das una mano
+    - porfavor ayudame
+    - necesito plata
+    - me gustaria obtener informacion
+
+- intent: nombre_cliente
+  examples: |
+    - te puedo decir mi nombre?
+    - quiero decirte mi nombre
+    - te dire mi nombre
+    - queres saber mi nombre?
+
+- intent: repetir_nombre
+  examples: |
+    - como es mi nombre?
+    - como me llamo?
+    - a que no te acordas mi nombre?
+    - sabes mi nombre?
+    - te olvidaste de mi
+    - decime mi nombre
+    - como me llamo
+    - quiero saber mi nombre
+    - decime mi nombre
+    - dale como es mi nombre
+    - mi nombre
+    - nombre
+    - porfavor decime mi nombre
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - estoy agradecido
+    - mil gracias
+    - de una
+    - genial
+    - joya
+    - buenisimo
+    - bueno
+
+
+- intent: dar_nombre
+  examples: |
+    - Mi nombre es [Francisco](cliente)
+    - Me llamo [Tobias](cliente)
+    - Soy [Analia](cliente)
+    - Me dicen [Felipe](cliente)
+    - Me conocen por [Eduardo](cliente)
+    - Podes llamarme [Luciana](cliente)
+    - [Tomas](cliente)
+    - [Nelson](cliente)
+    - [Matias](cliente)
+    - [Alberto](cliente)
+    - [Florencia](cliente)
+    - [Sofia](cliente)
+    - [Martina](cliente)
+    - [Miguel](cliente)
+    - [Raul](cliente)
+
+- intent: tarjetas
+  examples: |
+    - tarjetas
+    - tarjeta
+    - quiero informacion sobre tarjetas
+    - informacion tarjetas
+
+- intent: info_tipo_tarjeta
+  examples: |
+    - [CREDITO]{"entity":"tipo_tarjeta"}
+    - [DEBITO]{"entity":"tipo_tarjeta"}
+    - tarjeta de [CREDITO]{"entity":"tipo_tarjeta"}
+    - tarjeta de [DEBITO]{"entity":"tipo_tarjeta"}
+    - informacion de tarjeta de [CREDITO]{"entity":"tipo_tarjeta"}
+    - informacion de tarjeta de [DEBITO]{"entity":"tipo_tarjeta"}
+    - me gustaria obtener informacion sobre como sacar una tarjeta de [CREDITO]{"entity":"tipo_tarjeta"}
+    - me gustaria obtener informacion sobre como sacar una tarjeta de [DEBITO]{"entity":"tipo_tarjeta"}
+
+- intent: pregunta_cliente
+  examples: |
+    - quiero ser cliente
+    - como hago para ser cliente
+    - me gustaria ser cliente
+    - cliente
+    - no soy cliente
+    - soy cliente
+
+- intent: cotizacion_dolar
+  examples: |
+    - quiero saber el precio del dolar
+    - precio dolar
+    - venta del dolar
+    - dolar
+    - cotizacion del dolar
+    - valor del dolar
+    - moneda
+    - precio de compra del dolar
+    - precio de venta del dolar
+    - cotizacion de divisa
+ 
