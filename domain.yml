@@ -1,0 +1,87 @@
+version: "2.0"
+config:
+  store_entities_as_slots: false
+intents:
+  - saludar
+  - despedirse
+  - afirmar
+  - denegar
+  - buen_humor
+  - mal_humor
+  - bot_challenge
+  - ayuda
+  - nombre_cliente
+  - repetir_nombre
+  - dar_nombre:
+      use_entities:
+        - cliente
+      ignore_entities:
+        - tipo_tarjeta  
+  - agradecer
+  - tarjetas
+  - pregunta_cliente
+  - info_tipo_tarjeta:
+      use_entities:
+        - tipo_tarjeta
+      ignore_entities:
+        - cliente 
+  - cotizacion_dolar      
+
+entities:
+  - cliente 
+  - tipo_tarjeta
+slots:
+  name:
+    type: text 
+  tipo_tarjeta:
+    type: text  
+  
+ 
+
+responses:
+  utter_saludar:
+  - text: "Buen dia, como estas?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Eso fue de ayuda?"
+
+  utter_happy:
+  - text: "Genial!!"
+
+  utter_despedirse:
+  - text: "Adios"
+
+  utter_iamabot:
+  - text: "Soy Raul, no necesitas saber mas"
+
+  utter_preguntar_nombre:
+  - text: "Como es tu nombre? "
+
+  utter_raul:
+  - text: "Hola soy Raul tu asistente virtual"  
+
+  utter_tarjeta_opcion:
+    - text: "Espectacular, de que tarjeta queres informacion, de DEBITO o CREDITO?"
+
+
+  utter_quieroTarjetasSoyCliente:
+    - text: "Joya, entonces hacé así: "
+    - text: "entrá a tu Online Banking y en Tarjetas elegí la opción de Solicitar tarjeta."  
+
+actions:
+  - action_recibir_nombre
+  - action_decir_nombre
+  - action_despedida_nombre
+  - action_verificar_cliente
+  - action_informacion_tarjeta
+  - action_cotizacion
+  - action_ayuda
+
+
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: true
